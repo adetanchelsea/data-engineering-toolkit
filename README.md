@@ -59,9 +59,9 @@ This repository contains is a set of basic python scripts that can make your dat
 ## Usage
 Run any script individually:
 ```bash
-python scripts/data_cleaning.py
-python scripts/data_transformation.py
-python scripts/data_loading.py
+scripts/data_cleaning.py
+scripts/data_transformation.py
+scripts/data_loading.py
 ```
 
 ## Future Enhancements
