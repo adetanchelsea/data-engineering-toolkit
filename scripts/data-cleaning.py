@@ -2,7 +2,7 @@ import pandas as pd
 
 def clean_data(input_file, output_file):
     """
-    Load in a CSV file, drop duplicates, handle missing values, standardize column names and save the output.
+    Read in a CSV file, drop duplicates, handle missing values, standardize column names and save the output.
 
     Parameters: 
     input_file (the file to be cleaned) 
@@ -11,14 +11,14 @@ def clean_data(input_file, output_file):
     Returns:
     A cleaned file with no duplicates and missing values.
     """
-    # Load the CSV file
+    # Read the CSV file
     df = pd.read_csv(input_file)
 
     # Remove duplicate rows
     df = df.drop_duplicates()
 
-    # Handle missing values (fill with empty string)
-    df = df.fillna("")
+    # Handle missing values (fill with unknown)
+    df = df.fillna("Unknown")
 
     # Standardize column names (make lowercase, replace spaces with underscores)
     df.columns = df.columns.str.lower().str.replace(" ", "_")
